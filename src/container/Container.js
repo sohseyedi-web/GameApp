@@ -1,8 +1,12 @@
 import React from 'react'
+import Navbar from './Navbar/Navbar'
 
-const Container = () => {
+const Container = ({children}) => {
   return (
-    <div>Container</div>
+    <>
+      <Navbar/>
+      {children}
+    </>
   )
 }
 

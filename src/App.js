@@ -1,8 +1,11 @@
 import React from 'react';
+import Container from './container/Container';
 
 function App() {
   return (
-    <div>soheil</div>
+    <Container>
+      Soheil
+    </Container>
   );
 }
 
