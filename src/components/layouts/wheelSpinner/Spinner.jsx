@@ -4,7 +4,7 @@ import Container from "./../../../container/Container";
 import { useState } from "react";
 
 const Spinner = () => {
-  const numberSpinner = [25, 50, 50, 75, 75, 100, 100, 125, 125, 150, 150, 25];
+  const numberSpinner = [25, 50, 75, 100, 125, 150, 175, 200];
 
   const [spinner, setSpinner] = useState(false);
 
@@ -12,7 +12,7 @@ const Spinner = () => {
     setSpinner(true);
     setTimeout(() => {
       setSpinner(false);
-    }, Math.floor(Math.random() * 1000) + 1);
+    }, Math.floor(Math.random() * 3000) + 1);
   };
 
   return (
@@ -22,24 +22,19 @@ const Spinner = () => {
           <div className="spinner-container__arrow">
             <RiIcon.RiArrowDownLine size={35} />
           </div>
-          <ul
+          <div
             className={
               spinner === true
                 ? "spinner-container__wheel start"
-                : "spinner-container__wheel end"
+                : "spinner-container__wheel start end"
             }
           >
             {numberSpinner.map((number, index) => (
-              <li className="spinner-container__wheel-box" key={index}>
-                <div
-                  className="spinner-container__wheel-box__text"
-                  spellCheck="false"
-                >
-                  {number}
-                </div>
-              </li>
+              <div className="spinner-container__wheel-box" key={index}>
+                {number}
+              </div>
             ))}
-          </ul>
+          </div>
           <button className="spinner-container__btn" onClick={startSpinner}>
             بگردون
           </button>
