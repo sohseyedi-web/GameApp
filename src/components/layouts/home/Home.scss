@@ -1,0 +1,21 @@
+.home {
+  padding: 3rem 0;
+
+  &-container {
+    text-align: center;
+    color: #fff;
+
+    &__title {
+      h5 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #eee;
+      }
+    }
+  }
+}
